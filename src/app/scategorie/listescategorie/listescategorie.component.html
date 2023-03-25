@@ -1,0 +1,24 @@
+<h3>Liste des sous Catégories</h3>
+<div class="container">
+    <td><button type="button" class="btn btn-success">Ajouter</button></td>
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Sous categorie</th>
+                <th scope="col">image sous categorie</th>
+                <th scope="col">categorie</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of souscategorie">
+                <th scope="row">{{p.nomscategorie}}</th>
+                <td><img src={{p.imagescat}} width="60" /> </td>
+                <td>{{p.categorieID}}</td>
+                <td><button type="button" class="btn btn-primary">Modifier</button></td>
+                <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,33 @@
+<p>modifarticle works!</p>
+<form (ngSubmit)="Modifierarticle()">
+    <div class="mb-3">
+        <label for="designation" class="form-label">Designation:</label>   
+        <input type="text" class="form-control" value="article.designation" name="designation" id="designation"[ngModel]="article.designation">
+      </div>
+    <div class="mb-3">
+      <label for="Reference" class="form-label">Reference</label>
+      <input type="text" name="reference" class="form-control" value="article.reference" name="reference" id="reference" [ngModel]="article.reference">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="marque" class="form-label">marque</label>   
+      <input type="text" class="form-control" name="marque" value="article.marque" id="marque"[ngModel]="article.marque">
+    </div>
+    <div class="mb-3">
+        <label for="prix" class="form-label">prix</label>   
+        <input type="text" class="form-control" name="prix" value="article.prix" id="prix"[ngModel]="article.prix">
+      </div>
+      <div class="mb-3">
+        <label for="qtestock" class="form-label">Quantite disponible:</label>   
+        <input type="text" class="form-control" value="article.qtestock" name="qtestock" id="qtestock"[ngModel]="article.qtestock">
+      </div>
+      <div class="mb-3">
+        <label for="scategorieID" class="form-label">Sous categorie:</label>   
+        <input type="text" class="form-control" name="scategorieID" value="article.scategorieID" id="scategorieID"[ngModel]="article.scategorieID">
+      </div>
+      <div class="mb-3">
+        <label for="imageart" class="form-label">lien de l'image:</label>   
+        <input type="text" class="form-control" name="qtestock" id="qtestock"[ngModel]="article.imageart">
+      </div>
+     <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>

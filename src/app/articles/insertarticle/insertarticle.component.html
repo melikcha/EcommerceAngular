@@ -1,0 +1,40 @@
+<form (ngSubmit)="ajoutarticle()">
+  <div class="mb-3">
+    <label for="designation" class="form-label">Designation:</label>
+    <input type="text" class="form-control" name="designation" placeholder="designation" id="designation"
+      [(ngModel)]="article.designation">
+  </div>
+  {{article.designation}}
+  <div class="mb-3">
+    <label for="Reference" class="form-label">Reference</label>
+    <input type="text" name="reference" class="form-control" placeholder="reference" name="reference" id="reference"
+      [(ngModel)]="article.reference">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="marque" class="form-label">marque</label>
+    <input type="text" class="form-control" placeholder="Marque" name="marque" id="marque" [(ngModel)]="article.marque">
+  </div>
+  <div class="mb-3">
+    <label for="prix" class="form-label">prix</label>
+    <input type="text" class="form-control" placeholder="Prix" name="prix" id="prix" [(ngModel)]="article.prix">
+  </div>
+  <div class="mb-3">
+    <label for="qtestock" class="form-label">Quantite disponible:</label>
+    <input type="text" class="form-control" name="qtestock" placeholder="quantite" id="qtestock"
+      [(ngModel)]="article.qtestock">
+  </div>
+  <div class="mb-3">
+    <label for="scategorieID" class="form-label">Sous categorie:</label>
+    <select name="scategorieID" class="form-control" id="scategorieID" [(ngModel)]="article.scategorieID">
+      <option *ngFor="let sd of scategories " value="sd.id">
+        {{sd.nomscategorie}}
+      </option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="imageart" class="form-label">lien de l'image:</label>
+    <input type="text" class="form-control" name="imageart" placeholder="" id="imageart" [(ngModel)]="article.imageart">
+  </div>
+  <button type="submit" class="btn btn-primary">Enregistrer</button>
+</form>

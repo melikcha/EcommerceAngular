@@ -1,0 +1,31 @@
+<p>listearticles works!</p>
+<h3>Liste des Articles</h3>
+<div class="container">
+    <td><button type="button" class="btn btn-success" routerLink="/insertArt">Ajouter</button></td>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Reference</th>
+<th>Designation</th>
+<th>Quantite</th>
+<th>Prix</th>
+<th>Marque</th>
+<th>Image</th>
+<th>Modifier</th>
+<th>Supprimer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="table-life" *ngFor="let p of articles">
+<th scope="row">{{p.reference}}</th>
+<td>{{p.designation}}</td>
+<td>{{p.qtestock}}</td>
+<td>{{p.prix}}</td>
+<td>{{p.marque}}</td>
+<td><img src={{p.imageart}} width="60"/></td>
+<td><button type="button" class="btn btn-primary" routerLink="/ModiftArt">Modifier</button></td>
+<td><button type="button" class="btn btn-danger" (click)="suppArticle(p._id)">Supprimer</button></td>
+</tr>
+</tbody>
+</table>
+</div>

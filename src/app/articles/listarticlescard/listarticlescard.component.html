@@ -1,0 +1,20 @@
+<div class="card-group">
+<div class ="col-md-2" *ngFor="let p of articles">
+  
+    <div class="card" style="width: 18rem; height: 30rem;">
+      <img src={{p.imageart}} width="150" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{p.designation}}</h5>
+        <p class="card-text">{{p.reference}}</p>
+        <p class="card-text">{{p.marque}}</p>
+        <p class="card-text">{{p.prix}}</p>
+        <p class="card-text">{{p.qtestock}}</p>
+        <a href="#" class="btn btn-primary"> add to card </a>
+
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
